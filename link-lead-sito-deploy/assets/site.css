@@ -1,0 +1,29 @@
+/* Link&Lead — hover, focus and active-page states as real CSS rules
+   (inline styles carry the base look, so these use !important to win) */
+.ll-btn-primary:hover { background:#c4dcf2 !important; }
+.ll-btn-primary:active { background:#7ba8d6 !important; }
+.ll-btn-primary:disabled, .ll-btn-primary[disabled] {
+  opacity:0.45; cursor:not-allowed; background:#94bce3 !important; transform:none !important;
+}
+.ll-lift { transition: transform .2s ease; }
+.ll-lift:hover { transform: translateY(-2px); }
+.ll-lift:active { transform: none; }
+.ll-btn-ghost:hover { border-color:#94bce3 !important; color:#94bce3 !important; }
+.ll-btn-ghost:active { border-color:#c4dcf2 !important; color:#c4dcf2 !important; }
+.ll-btn-outline:hover { background:rgba(148,188,227,0.12) !important; color:#c4dcf2 !important; }
+.ll-card:hover, .ll-frame:hover { border-color:#94bce3 !important; }
+.ll-card:hover { transform: translateY(-4px); }
+.ll-link:hover { color:#94bce3 !important; }
+.ll-nav-link:hover { color:#94bce3 !important; border-bottom-color:#94bce3 !important; }
+.ll-nav-link[aria-current="page"] { color:#94bce3 !important; border-bottom-color:#94bce3 !important; }
+/* the brand mark is the Home link: mark it the same way when Home is the current page */
+.ll-nav-brand[aria-current="page"] { color:#94bce3 !important; }
+.ll-nav-brand[aria-current="page"] .ll-brand-name { border-bottom:1px solid #94bce3; padding-bottom:2px; }
+.ll-nav-brand:hover { color:#c4dcf2 !important; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid #94bce3; outline-offset: 2px;
+}
+::selection { background: rgba(148,188,227,0.3); }
+@media (prefers-reduced-motion: reduce) {
+  .ll-lift:hover, .ll-card:hover { transform: none; }
+}

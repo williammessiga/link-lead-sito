@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<header style="position:sticky;top:0;z-index:50;background:rgba(18,26,35,0.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(238,242,246,0.14)">
+  <nav style="max-width:1280px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+    <a class="ll-nav-brand" href="index.html" aria-current="{{ curHome }}" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#eef2f6;margin-right:auto">
+      <img src="assets/logo-linklead.png" alt="Link&amp;Lead" style="width:40px;height:auto;max-width:40px;object-fit:contain;flex:none;filter:brightness(0) invert(1)" />
+      <span style="display:flex;flex-direction:column;line-height:1">
+        <span class="ll-brand-name" style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:21px;letter-spacing:0.01em;align-self:flex-start">Link&amp;Lead</span>
+        <span style="font-family:'Barlow',sans-serif;font-size:10px;letter-spacing:0.26em;text-transform:uppercase;color:#94bce3;margin-top:3px">Consulting</span>
+      </span>
+    </a>
+    <div style="display:flex;align-items:center;gap:26px;flex-wrap:wrap">
+      <a class="ll-nav-link" href="Metodo.dc.html" aria-current="{{ curMetodo }}" style="font-family:'Barlow Condensed',sans-serif;font-size:16px;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;color:#eef2f6;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s">Metodo</a>
+      <a class="ll-nav-link" href="Studio.dc.html" aria-current="{{ curStudio }}" style="font-family:'Barlow Condensed',sans-serif;font-size:16px;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;color:#eef2f6;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s">Studio</a>
+      <a class="ll-nav-link" href="Territorio.dc.html" aria-current="{{ curTerritorio }}" style="font-family:'Barlow Condensed',sans-serif;font-size:16px;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;color:#eef2f6;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s">Territorio</a>
+      <a class="ll-nav-link" href="Contatti.dc.html" aria-current="{{ curContatti }}" style="font-family:'Barlow Condensed',sans-serif;font-size:16px;letter-spacing:0.04em;text-transform:uppercase;text-decoration:none;color:#eef2f6;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s">Contatti</a>
+      <a class="ll-btn-primary" href="tel:+393333990380" style="position:relative;display:inline-flex;align-items:center;gap:8px;background:#94bce3;color:#121a23;border:1px solid #94bce3;padding:9px 18px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:0.06em;text-transform:uppercase;transition:background .2s">Discovery Call</a>
+    </div>
+  </nav>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:80},&quot;current&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;metodo&quot;,&quot;studio&quot;,&quot;territorio&quot;,&quot;contatti&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const c = this.props.current || "";
+    const f = (k) => (c === k ? "page" : undefined);
+    return { curHome: f("home"), curMetodo: f("metodo"), curStudio: f("studio"), curTerritorio: f("territorio"), curContatti: f("contatti") };
+  }
+}
+</script>
+</body>
+</html>

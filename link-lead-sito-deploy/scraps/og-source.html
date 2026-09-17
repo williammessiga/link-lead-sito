@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<title>OG source</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@400;600&display=swap" />
+<style>
+  body { margin:0; background:#0c1218; display:flex; align-items:center; justify-content:center; min-height:100vh; }
+  #og { position:relative; width:600px; height:315px; background:#121a23; color:#eef2f6;
+        background-image:linear-gradient(rgba(148,188,227,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(148,188,227,0.07) 1px,transparent 1px);
+        background-size:42px 42px; overflow:hidden; font-family:'Barlow',sans-serif;
+        display:flex; flex-direction:column; justify-content:space-between; padding:36px 40px; box-sizing:border-box; }
+  #og::before, #og::after { content:''; position:absolute; background:rgba(148,188,227,0.45); }
+  #og::before { left:20px; right:20px; top:20px; height:1px; }
+  #og::after { left:20px; right:20px; bottom:20px; height:1px; }
+  .vr { position:absolute; top:20px; bottom:20px; width:1px; background:rgba(148,188,227,0.45); }
+  .mark { position:absolute; width:11px; height:11px; }
+  .mark::before,.mark::after { content:''; position:absolute; background:#94bce3; }
+  .mark::before { left:0; right:0; top:50%; height:1px; }
+  .mark::after { top:0; bottom:0; left:50%; width:1px; }
+  .brand { display:flex; align-items:center; gap:9px; position:relative; }
+  .brand img { width:32px; height:auto; filter:brightness(0) invert(1); }
+  .bname { font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:18px; letter-spacing:0.01em; line-height:1; }
+  .bsub { font-size:6px; letter-spacing:0.3em; text-transform:uppercase; color:#94bce3; margin-top:3px; }
+  h1 { font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:52px; line-height:0.96;
+       letter-spacing:-0.02em; margin:0; }
+  h1 span { color:#94bce3; }
+  .foot { display:flex; justify-content:space-between; align-items:flex-end; gap:16px; }
+  .kicker { font-size:7.5px; letter-spacing:0.28em; text-transform:uppercase; color:#94bce3; }
+  .meta { font-size:9.5px; color:rgba(238,242,246,0.72); text-align:right; line-height:1.5; }
+</style>
+</head>
+<body>
+<div id="og">
+  <div class="vr" style="left:20px"></div>
+  <div class="vr" style="right:20px"></div>
+  <i class="mark" style="left:14.5px;top:14.5px"></i><i class="mark" style="right:14.5px;top:14.5px"></i>
+  <i class="mark" style="left:14.5px;bottom:14.5px"></i><i class="mark" style="right:14.5px;bottom:14.5px"></i>
+  <div class="brand">
+    <img src="../assets/logo-linklead.png" alt="" />
+    <div>
+      <div class="bname">Link&amp;Lead</div>
+      <div class="bsub">Consulting</div>
+    </div>
+  </div>
+  <div>
+    <div class="kicker" style="margin-bottom:11px">AI Strategy &amp; Implementation</div>
+    <h1>L'AI è ovunque.<br /><span>La strategia no.</span></h1>
+  </div>
+  <div class="foot">
+    <div class="kicker">Metodo LLAS</div>
+    <div class="meta">Direzione strategica sull'intelligenza artificiale<br />per imprese, studi professionali ed enti del territorio</div>
+  </div>
+</div>
+</body>
+</html>

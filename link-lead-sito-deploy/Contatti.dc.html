@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Contatti — Link&amp;Lead Consulting</title>
+<meta name="description" content="Richiedi una Discovery Call gratuita o scrivici per un progetto di intelligenza artificiale. Sede a Imperia, Liguria." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Link&amp;Lead Consulting" />
+<meta property="og:title" content="Contatti — Link&amp;Lead Consulting" />
+<meta property="og:description" content="Richiedi una Discovery Call gratuita o scrivici per un progetto di intelligenza artificiale. Sede a Imperia, Liguria." />
+<meta property="og:image" content="assets/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="apple-touch-icon" href="assets/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&amp;family=Barlow+Condensed:wght@400;600&amp;display=swap" />
+<link rel="stylesheet" href="assets/ds/styles.css" />
+<link rel="stylesheet" href="assets/site.css" />
+<script src="_ds/industry-98d857dc-fae8-4b47-9423-88d501e44da6/_ds_bundle.js"></script>
+<style>
+  body { margin:0; background:#121a23; color:#eef2f6; }
+  a:hover { color:#c4dcf2; }
+  @keyframes llFade { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:none; } }
+</style>
+</helmet>
+<div style="--color-bg:#121a23;--color-surface:#1a2530;--color-text:#eef2f6;--color-divider:rgba(238,242,246,0.18);--color-accent:#94bce3;background:#121a23;color:#eef2f6;font-family:'Barlow',sans-serif;overflow-x:hidden">
+  <dc-import name="Nav" current="contatti" hint-size="100%,72px"></dc-import>
+
+  <section style="border-bottom:1px solid rgba(238,242,246,0.12);background-image:linear-gradient(rgba(148,188,227,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(148,188,227,0.06) 1px,transparent 1px);background-size:72px 72px">
+    <div style="max-width:1280px;margin:0 auto;padding:88px 28px 72px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;align-items:start;animation:llFade .7s ease both">
+      <div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px">
+          <span style="width:36px;height:1px;background:#94bce3;display:block"></span>
+          <span style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#94bce3">Contatti</span>
+        </div>
+        <h1 style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:clamp(46px,6.4vw,86px);line-height:1;letter-spacing:-0.02em;margin:0 0 24px">Parliamone.</h1>
+        <p style="font-size:19px;line-height:1.65;color:rgba(238,242,246,0.72);max-width:52ch;margin:0 0 36px">Il primo passo è una Discovery Call gratuita: trenta minuti per capire il vostro contesto e valutare, con onestà, se possiamo esservi utili. Nessun impegno, nessuna pressione commerciale.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap">
+          <a class="ll-btn-primary ll-lift" href="tel:+393333990380" style="display:inline-flex;align-items:center;gap:10px;background:#94bce3;color:#121a23;border:1px solid #94bce3;padding:14px 26px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:17px;letter-spacing:0.06em;text-transform:uppercase;transition:background .2s,transform .2s">Chiama 333 399 0380</a>
+          <a class="ll-btn-ghost" href="https://wa.me/393333990380?text=Salve%2C%20vorrei%20prenotare%20una%20Discovery%20Call." target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(238,242,246,0.3);color:#eef2f6;padding:14px 26px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:17px;letter-spacing:0.06em;text-transform:uppercase;transition:border-color .2s,color .2s">WhatsApp</a>
+        </div>
+      </div>
+      <div class="blueprint" style="padding:34px;background:rgba(29,45,61,0.55)">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+          <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:26px;margin:0 0 6px">Scriveteci</h2>
+          <p style="margin:0 0 22px;font-size:15px;color:rgba(238,242,246,0.6)">Rispondiamo entro 24 ore lavorative.</p>
+          <form onSubmit="{{ onSubmit }}" style="display:grid;gap:16px">
+            <input type="hidden" name="_subject" value="Nuovo contatto dal sito Link&amp;Lead" />
+            <input type="hidden" name="modulo" value="Contatti" />
+            <input type="text" name="_gotcha" tabIndex="-1" autoComplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
+            <div class="field"><label for="c-nome">Nome e cognome</label><input class="input" id="c-nome" name="nome" required="required" style="background:rgba(238,242,246,0.06);border-color:rgba(238,242,246,0.25);color:#eef2f6;min-height:42px" /></div>
+            <div class="field"><label for="c-org">Organizzazione</label><input class="input" id="c-org" name="organizzazione" style="background:rgba(238,242,246,0.06);border-color:rgba(238,242,246,0.25);color:#eef2f6;min-height:42px" /></div>
+            <div class="field"><label for="c-email">Email</label><input class="input" id="c-email" name="email" type="email" required="required" style="background:rgba(238,242,246,0.06);border-color:rgba(238,242,246,0.25);color:#eef2f6;min-height:42px" /></div>
+            <div class="field">
+              <label for="c-motivo">Di cosa volete parlare</label>
+              <div style="display:flex;flex-direction:column;gap:10px;margin-top:6px">
+                <label class="radio" style="color:#eef2f6"><input type="radio" name="motivo" value="discovery" defaultChecked="{{ true }}" /><span class="dot" style="box-shadow:inset 0 0 0 4px #121a23"></span>Discovery Call gratuita</label>
+                <label class="radio" style="color:#eef2f6"><input type="radio" name="motivo" value="index" /><span class="dot" style="box-shadow:inset 0 0 0 4px #121a23"></span>AI Readiness Index</label>
+                <label class="radio" style="color:#eef2f6"><input type="radio" name="motivo" value="studio" /><span class="dot" style="box-shadow:inset 0 0 0 4px #121a23"></span>Un progetto per lo Studio</label>
+                <label class="radio" style="color:#eef2f6"><input type="radio" name="motivo" value="format" /><span class="dot" style="box-shadow:inset 0 0 0 4px #121a23"></span>Un format per il territorio</label>
+              </div>
+            </div>
+            <div class="field"><label for="c-msg">Messaggio</label><textarea class="input" id="c-msg" name="messaggio" style="background:rgba(238,242,246,0.06);border-color:rgba(238,242,246,0.25);color:#eef2f6"></textarea></div>
+            <button class="ll-btn-primary" type="submit" disabled="{{ sending }}" style="background:#94bce3;color:#121a23;border:1px solid #94bce3;padding:14px 24px;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:17px;letter-spacing:0.06em;text-transform:uppercase;transition:background .2s">{{ submitLabel }}</button>
+            <p style="margin:0;font-size:12px;color:rgba(238,242,246,0.62)">Trattati solo per rispondervi, tramite il nostro fornitore di moduli di contatto. Nessuna newsletter.</p>
+            <a href="Privacy.dc.html" class="ll-link" style="font-size:12px;color:#94bce3;text-decoration:none">Leggi l'informativa privacy</a>
+            <sc-if value="{{ hasError }}" hint-placeholder-val="{{ false }}">
+              <p style="margin:0;font-size:13px;line-height:1.5;color:#e8ad9e">{{ errorNote }}</p>
+            </sc-if>
+          </form>
+        </sc-if>
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:28px 0;text-align:center">
+            <span style="font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:#94bce3">Richiesta inviata</span>
+            <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:30px;margin:14px 0 12px">Grazie, vi ricontattiamo presto.</h2>
+            <p style="margin:0 0 22px;font-size:16px;line-height:1.6;color:rgba(238,242,246,0.7)">Riceverete una risposta entro 24 ore lavorative. Se avete urgenza, chiamate direttamente il 333 399 0380.</p>
+            <button onClick="{{ onReset }}" style="background:transparent;color:#94bce3;border:1px solid rgba(148,188,227,0.5);padding:11px 22px;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:0.06em;text-transform:uppercase">Invia un'altra richiesta</button>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:88px 28px">
+    <div data-reveal="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border-top:1px solid rgba(238,242,246,0.16)">
+      <div style="padding:30px 24px 30px 0;border-bottom:1px solid rgba(238,242,246,0.12)"><span style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#94bce3;display:block;margin-bottom:10px">Telefono / WhatsApp</span><a href="tel:+393333990380" style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:24px;color:#eef2f6;text-decoration:none">333 399 0380</a></div>
+      <div style="padding:30px 24px;border-bottom:1px solid rgba(238,242,246,0.12)"><span style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#94bce3;display:block;margin-bottom:10px">Email</span><a href="mailto:williamessiga@infolinklead.com" style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:21px;color:#eef2f6;text-decoration:none;word-break:break-word">williamessiga@infolinklead.com</a></div>
+      <div style="padding:30px 24px;border-bottom:1px solid rgba(238,242,246,0.12)"><span style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#94bce3;display:block;margin-bottom:10px">Sede</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:24px">Imperia, Liguria</span></div>
+      <div style="padding:30px 0 30px 24px;border-bottom:1px solid rgba(238,242,246,0.12)"><span style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#94bce3;display:block;margin-bottom:10px">P.IVA</span><span style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:24px">01827980085</span></div>
+    </div>
+  </section>
+
+  <section style="background:#1d2d3d;border-top:1px solid rgba(238,242,246,0.12)">
+    <div data-reveal="1" style="max-width:1280px;margin:0 auto;padding:96px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;align-items:start">
+      <div>
+        <span style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#94bce3">Il founder</span>
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:clamp(32px,4.2vw,54px);line-height:1.04;margin:18px 0 22px">Chi c'è dietro Link&amp;Lead</h2>
+        <p style="margin:0 0 16px;font-size:17px;line-height:1.7;color:rgba(238,242,246,0.72)">Link&amp;Lead nasce dal percorso di William Messiga, imprenditore di Imperia, dalla convinzione che alle organizzazioni del territorio non manchi la tecnologia, ma qualcuno capace di tradurla in decisioni.</p>
+        <p style="margin:0 0 16px;font-size:17px;line-height:1.7;color:rgba(238,242,246,0.72)">L'approccio è diretto e concreto: niente gergo da convegno, niente promesse gonfiate. Prima si capisce come lavora un'organizzazione — le persone, i flussi, i vincoli reali — e solo dopo si parla di intelligenza artificiale. Quando un progetto non ha senso, lo diciamo: è la base della fiducia su cui costruiamo ogni collaborazione.</p>
+        <p style="margin:0;font-size:17px;line-height:1.7;color:rgba(238,242,246,0.72)">Radicato nel ponente ligure e operativo in tutta Italia, William unisce visione strategica e capacità di costruzione: ogni soluzione proposta è qualcosa che Link&amp;Lead sa anche realizzare.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <figure class="blueprint duotone" style="margin:0;aspect-ratio:4/5;max-width:360px;background-image:repeating-linear-gradient(135deg,rgba(148,188,227,0.14) 0 2px,transparent 2px 9px);display:flex;align-items:flex-end;padding:18px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <figcaption style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:0.06em;color:rgba(238,242,246,0.75);margin:0">ritratto del founder — foto da inserire</figcaption>
+        </figure>
+        <div class="blueprint" style="padding:26px;background:rgba(18,26,35,0.5)">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <p style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:22px;line-height:1.3;margin:0 0 14px">«Sono cresciuto qui, e qui voglio dimostrare che l'innovazione seria non ha bisogno di una metropoli. Ha bisogno di metodo.»</p>
+          <span style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#94bce3">William Messiga — Founder, AI Strategy &amp; Implementation Advisor</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;formspreeId&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;mdeoqlng&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Moduli&quot;}}">
+class Component extends DCLogic {
+  state = { status: 'idle' };
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    els.forEach((el) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity .7s ease, transform .7s ease';
+    });
+    const show = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    if (typeof IntersectionObserver === 'undefined') { els.forEach(show); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -12% 0px' });
+    els.forEach((el) => io.observe(el));
+    this._fallback = setTimeout(() => els.forEach(show), 2500);
+  }
+  componentWillUnmount() { clearTimeout(this._fallback); }
+  renderVals() {
+    const id = (this.props.formspreeId || 'mdeoqlng').trim();
+    const st = this.state.status || 'idle';
+    return {
+      sent: st === 'sent',
+      notSent: st !== 'sent',
+      sending: st === 'sending',
+      submitLabel: st === 'sending' ? 'Invio in corso\u2026' : 'Invia richiesta',
+      hasError: st === 'error' || st === 'unconfigured',
+      errorNote: st === 'unconfigured'
+        ? 'Invio automatico non ancora attivo: scriveteci a williamessiga@infolinklead.com o chiamate il 333 399 0380.'
+        : 'Invio non riuscito. Riprovate o scriveteci direttamente a williamessiga@infolinklead.com.',
+      onSubmit: (e) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        if (!id) { this.setState({ status: 'unconfigured' }); return; }
+        this.setState({ status: 'sending' });
+        fetch('https://formspree.io/f/' + id, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        })
+          .then((r) => {
+            if (!r.ok) throw new Error('http ' + r.status);
+            this.setState({ status: 'sent' });
+            form.reset();
+          })
+          .catch(() => this.setState({ status: 'error' }));
+      },
+      onReset: () => this.setState({ status: 'idle' })
+    };
+  }
+}
+</script>
+</body>
+</html>
